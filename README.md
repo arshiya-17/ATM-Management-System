@@ -46,6 +46,6 @@ Start → Enter PIN → Verify PIN → Display Menu → Perform Transactions →
 
 ## Team Members
 - Arshiya Pathan
-- Member 2
-- Member 3
-- Member 4
+- Sneha Houshetti
+- Pavitra Gore
+- Srushti Hipale
