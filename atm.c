@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+// Member: sneha Houshetti 
+// Contribution: Added comments and code improvements
 #define FILE_NAME "accounts.dat"
 #define LOG_FILE "log.txt"
 
