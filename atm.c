@@ -14,13 +14,13 @@
 Member 1 - Arshiya Pathan (Project Lead)
 - Core structure, login system, file handling
 
-Member 2
+Member 2 - Pavitra Gore
 - Deposit & withdraw logic improvement
 
-Member 3
+Member 3 - Srushti Hipale
 - UI improvement & input validation
 
-Member 4
+Member 4 - Sneha Houshetti
 - Transfer system & PIN change feature
 =========================================
 */
