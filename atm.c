@@ -142,3 +142,65 @@ void updateFile() {
 
     rename("temp.dat",FILE_NAME);
 }
+// 🔹 FIND ACCOUNT
+// Sneha Houshetti
+
+int findAccount(int accNo, struct Account *result) {
+
+    FILE *fp=fopen(FILE_NAME,"rb");
+
+    while(fread(result,sizeof(struct Account),1,fp)) {
+
+        if(result->accNo==accNo) {
+
+            fclose(fp);
+
+            return 1;
+        }
+    }
+
+    fclose(fp);
+
+    return 0;
+}
+
+
+// 🔹 UPDATE ANY ACCOUNT
+// Sneha Houshetti
+
+void updateAnyAccount(struct Account updated) {
+
+    FILE *fp=fopen(FILE_NAME,"rb");
+    FILE *fp2=fopen("temp.dat","wb");
+
+    struct Account temp;
+
+    while(fread(&temp,sizeof(temp),1,fp)) {
+
+        if(temp.accNo==updated.accNo) {
+
+            fwrite(&updated,sizeof(updated),1,fp2);
+
+        } else {
+
+            fwrite(&temp,sizeof(temp),1,fp2);
+        }
+    }
+
+    fclose(fp);
+    fclose(fp2);
+
+    remove(FILE_NAME);
+
+    rename("temp.dat",FILE_NAME);
+}
+
+
+// 🔹 ATM MENU
+
+void atmMenu() {
+
+    int choice;
+    float amount;
+
+    do {
