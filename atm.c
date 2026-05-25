@@ -204,3 +204,24 @@ void atmMenu() {
     float amount;
 
     do {
+        printf("\n===== ATM MENU =====\n");
+
+        printf("1. Check Balance\n");
+        printf("2. Deposit\n");
+        printf("3. Withdraw\n");
+        printf("4. Transfer Money\n");
+        printf("5. Change PIN\n");
+        printf("6. Logout\n");
+
+        printf("Enter choice: ");
+        scanf("%d",&choice);
+
+        switch(choice) {
+
+            // Srushti Hippale
+            case 1:
+
+                printf("Current Balance: %.2f\n",
+                acc.balance);
+
+                break;
