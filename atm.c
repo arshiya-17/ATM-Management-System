@@ -225,3 +225,57 @@ void atmMenu() {
                 acc.balance);
 
                 break;
+            // Pavitra Gore
+            case 2:
+
+                printf("Enter amount to deposit: ");
+
+                scanf("%f",&amount);
+
+                if(amount>0) {
+
+                    acc.balance+=amount;
+
+                    updateFile();
+
+                    addLog("Deposit done (Pavitra Gore)");
+
+                    printf("Deposit Successful!\n");
+
+                } else {
+
+                    printf("Invalid amount!\n");
+                }
+
+                break;
+
+
+            // Pavitra Gore
+            case 3:
+
+                printf("Enter amount to withdraw: ");
+
+                scanf("%f",&amount);
+
+                if(amount<=0) {
+
+                    printf("Invalid amount!\n");
+                }
+
+                else if(amount>acc.balance) {
+
+                    printf("Insufficient Balance!\n");
+                }
+
+                else {
+
+                    acc.balance-=amount;
+
+                    updateFile();
+
+                    addLog("Withdraw done (Pavitra Gore)");
+
+                    printf("Withdraw Successful!\n");
+                }
+
+                break;
