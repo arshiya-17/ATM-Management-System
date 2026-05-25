@@ -279,3 +279,76 @@ void atmMenu() {
                 }
 
                 break;
+// Sneha Houshetti
+            case 4: {
+
+                int targetAccNo;
+                struct Account target;
+
+                printf("Enter target account number: ");
+
+                scanf("%d",&targetAccNo);
+
+                if(findAccount(targetAccNo,&target)) {
+
+                    printf("Enter amount: ");
+
+                    scanf("%f",&amount);
+
+                    if(amount>0 &&
+                    amount<=acc.balance) {
+
+                        acc.balance-=amount;
+
+                        target.balance+=amount;
+
+                        updateFile();
+
+                        updateAnyAccount(target);
+
+                        printf("Transfer Successful!\n");
+
+                        addLog("Transfer done (Sneha Houshetti)");
+                    }
+
+                    else {
+
+                        printf("Invalid transfer amount!\n");
+                    }
+
+                } else {
+
+                    printf("Target account not found!\n");
+                }
+
+                break;
+            }
+
+            // Sneha Houshetti
+            case 5:
+
+                printf("Enter new PIN: ");
+
+                scanf("%d",&acc.pin);
+
+                updateFile();
+
+                printf("PIN Changed Successfully!\n");
+
+                addLog("PIN changed (Sneha Houshetti)");
+
+                break;
+
+            case 6:
+
+                printf("Logging out...\n");
+
+                break;
+
+            default:
+
+                printf("Invalid choice!\n");
+        }
+
+    } while(choice!=6);
+}
