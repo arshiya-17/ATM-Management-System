@@ -203,7 +203,7 @@ void atmMenu() {
     int choice;
     float amount;
 
-    do {
+    do { //srushti hipale
         printf("\n===== ATM MENU =====\n");
 
         printf("1. Check Balance\n");
