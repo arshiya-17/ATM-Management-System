@@ -352,3 +352,46 @@ void atmMenu() {
 
     } while(choice!=6);
 }
+// 🔹 MAIN
+// Arshiya Pathan
+
+int main() {
+
+    int choice;
+
+    do {
+
+        printf("\n===== MAIN MENU =====\n");
+
+        printf("1. Create Account\n");
+        printf("2. Login\n");
+        printf("3. Exit\n");
+
+        printf("Enter choice: ");
+
+        scanf("%d",&choice);
+
+        switch(choice) {
+
+            case 1:
+                createAccount();
+                break;
+
+            case 2:
+                if(login()) {
+                    atmMenu();
+                }
+                break;
+
+            case 3:
+                printf("Thank you!\n");
+                break;
+
+            default:
+                printf("Invalid choice!\n");
+        }
+
+    } while(choice!=3);
+
+    return 0;
+}
